@@ -16,11 +16,11 @@ const writeFile = (user: user) => {
     });
 }
 
-// writeFile({
-//     name: 'Eduardo',
-//     age: 26,
-//     status: 'active'
-// });
+writeFile({
+    name: 'Eduardo',
+    age: 26,
+    status: 'active'
+});
 
 const readFile = (): user => {
     const fileData = fs.readFileSync('../bd.json', 'utf-8');

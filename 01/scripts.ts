@@ -1,33 +1,9 @@
 import fs from 'fs';
 
-type user = {
-    name: string,
-    age: number,
-    status: 'active' | 'not active'
+export const readFile = (): unknown => {
+    return JSON.parse(fs.readFileSync('../bd.json', 'utf-8'));
 }
 
-const writeFile = (user: user) => {
-    const jsonUser = JSON.stringify(user);
-
-    fs.writeFile('../bd.json', jsonUser, (error) => {
-        if (error) {
-            return console.log(error);
-        }
-    });
+export const writeFile = (user: any): void => {
+    fs.writeFileSync('../bd.json', JSON.stringify(user));
 }
-
-writeFile({
-    name: 'Eduardo',
-    age: 26,
-    status: 'active'
-});
-
-const readFile = (): user => {
-    const fileData = fs.readFileSync('../bd.json', 'utf-8');
-
-    const userDb = JSON.parse(fileData);
-
-    return userDb;
-}
-
-console.log(readFile());

@@ -1,1 +1,21 @@
-{"name":"Eduardo","age":26,"status":"active"}
+[
+    {
+        "nome": "Ana",
+        "email": "ana@email.com",
+        "cpf": "000.000.000-00",
+        "profissao": "Programador",
+        "endereco": null
+    },
+    {
+        "nome": "Erick",
+        "email": "Erick@email.com",
+        "cpf": "000.000.000-00",
+        "profissao": "Programador",
+        "endereco": {
+            "cep": "000000-000",
+            "rua": "teste",
+            "bairro": "teste",
+            "cidade": "teste"
+        }
+    }
+]
